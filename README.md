@@ -2,17 +2,15 @@
 
 ## Núcleo Nivelamento
 
-### Introdução ao Curso
+### Introdução ao Curso, Instalação do R e do R Studio e História
 
-### Instalação do R e do R Studio
-
-### Introdução ao R, Interface, História, como o R Trabalha, Atribuições, Objetos e Coerções de Tipos
+### Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos e Coerções de Tipos
 
 ### Escalares, Vetores, Aritmética, Funções, Operadores Lógicos, Operadores Booleanos, Matrizes, Lista e Data.Frame
 
 ### Importando Dados, Definir caminhos, Funções, Estruturas de controle, Laços de Repetição
 
-### Pacotes, Operadores :: e :::, Super Atribuição
+### Pacotes
 
 ## Núcleo Básico
 
@@ -20,10 +18,13 @@
 
 ### Teste de Hipóteses, ANOVA, Intervalos de Confiança, Regressão
 
+### Operadores :: e :::, Super Atribuição
+
 ## Núcleo Intermediário
 
 ### Tidyverse:: Tidyr, Tibble, StringR, Forcats, Purrr
+### Dashboards, Xaringan, Leaflet e NSE (?)
 
 ## Núcleo Avançado
 
-### Dashboards, Tidymodels, Leaflet e NSE (?)
+### Machine Learning (TidyModels)
