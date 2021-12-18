@@ -1,6 +1,6 @@
 # Curso_R
 
-## Núcleo Básico
+## Núcleo Nivelamento
 
 ### Introdução ao Curso
 
@@ -14,6 +14,16 @@
 
 ### Pacotes, Operadores :: e :::, Super Atribuição
 
+## Núcleo Básico
+
+### R markdown, Github, Tidyverse::Ggplot,Dplyr, ReadR
+
+### Teste de Hipóteses, ANOVA, Intervalos de Confiança, Regressão
+
 ## Núcleo Intermediário
 
-### Tidyverse
+### Tidyverse:: Tidyr, Tibble, StringR, Forcats, Purrr
+
+## Núcleo Avançado
+
+### Dashboards, Tidymodels, Leaflet e NSE (?)
