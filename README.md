@@ -48,6 +48,8 @@
 
 ### Teste de Hipóteses, ANOVA, Intervalos de Confiança, Regressão
 
+### Faltou Dados Categóricos
+
 ## Núcleo Intermediário
 
 ### Tidyverse:: Tidyr, Tibble, StringR, Forcats, Purrr
