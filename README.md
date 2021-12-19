@@ -2,23 +2,51 @@
 
 ## Núcleo Nivelamento
 
-### Introdução ao Curso, Instalação do R e do R Studio e História
+### Aula 1: Introdução ao Curso, Instalação do R e do R Studio e História
 
-### Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos e Coerções de Tipos
+### Aula 2: Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos e Coerções de Tipos
 
-### Escalares, Vetores, Aritmética, Funções, Operadores Lógicos, Operadores Booleanos, Matrizes, Lista e Data.Frame
+### Aula 3: Importando Dados, Definindo Caminhos, Tipos de objetos: Vetor, Matrizes, Lista e DataFrames
 
-### Importando Dados, Definir caminhos, Funções, Estruturas de controle, Laços de Repetição
+### Aula 4: Escalares, Aritmética, Operadores Lógicos, Operadores Booleanos, Estruturas de controle, Laços de Repetição
 
-### Pacotes
+### Aula 5: Funções e Pacotes
 
 ## Núcleo Básico
 
-### R markdown, Github, Tidyverse::Ggplot,Dplyr, ReadR
+### Aula 6: R markdown
+
+### Aula 7: Github
+
+### Aula 8: Frequência, Medidas Resumo (Média, Mediana, Moda, Variância, Desvio-Padrão, IIQ) e Boxplot
+
+### Aula 9: Gráficos de Simetria, Distribuição Normal, Assimetria e Curtose
+
+### Aula 10: Estimadores
+
+### Aula 11: Aula prática - Começando com Tidyverse: READR, GGPLOT e DPLYR - Aplicando a DataFrame na web - Normal?
+
+### Aula 12: Aula prática - Continuancão com GGPLOT e DPLYR - Importando Dataframe: Como resolveremos seus problemas? STRINGR?
+
+### Aula 13: Teste de Hipóteses e Intervalos de Confiança: Entendo o básico e conhecendo testes úteis
+
+### Aula 14: Aula prática - Aplicação dos testes, Operador :: e ::: e Super atribuição
+
+### Aula 15: ANOVA: DIC, DBC e DQL - Testes: Tukey, Duncan
+
+### Aula 16: Estatística Não-Paramétrica: Alternativas para os métodos anteriores
+
+### Aula 17: Aula prática - Estudando a ANOVA, Testes de Hipóteses e suas alternativas não paramétricas
+
+### Aula 18: Entendo a Regressão Linear Normal
+
+### Aula 19: Aula prática: Verificando a Regressão Linear Normal e seus pressupostoos no R
+
+### Aula 20: Pacotes MYPDF1 e SigmaJR
+
+
 
 ### Teste de Hipóteses, ANOVA, Intervalos de Confiança, Regressão
-
-### Operadores :: e :::, Super Atribuição
 
 ## Núcleo Intermediário
 
