@@ -32,6 +32,8 @@
 
 ### Aula 14: Aula prática - Aplicação dos testes, Operador :: e ::: e Super atribuição
 
+## Núcleo Intermediário
+
 ### Aula 15: ANOVA: DIC, DBC e DQL - Testes: Tukey, Duncan
 
 ### Aula 16: Estatística Não-Paramétrica: Alternativas para os métodos anteriores
@@ -42,18 +44,19 @@
 
 ### Aula 19: Aula prática: Verificando a Regressão Linear Normal e seus pressupostoos no R
 
-### Aula 20: Pacotes MYPDF1 e SigmaJR
+### Aula 20: Dados Categórios e Aplicações - Forcatas
 
+### Aula 21: Pacotes MYPDF1 e SigmaJR
 
+### Aula 22: TidyR, Tibble e Purrr - O que é?
 
-### Teste de Hipóteses, ANOVA, Intervalos de Confiança, Regressão
+### Aula 23: FlexDashboard
 
-### Faltou Dados Categóricos
+### Aula 24: Xaringna
 
-## Núcleo Intermediário
+### Aula 25: FlexDashboard e Leaflet
 
-### Tidyverse:: Tidyr, Tibble, StringR, Forcats, Purrr
-### Dashboards, Xaringan, Leaflet e NSE (?)
+### NSE (?)
 
 ## Núcleo Avançado
 
