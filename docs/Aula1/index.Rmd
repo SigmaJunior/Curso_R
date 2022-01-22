@@ -1,0 +1,50 @@
+---
+title: "Aula 02"
+subtitle: "Introdução ao R-verso"
+author: "Vítor Pereira"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: ["css/default.css", "css/mmp.css" , "css/mmp-fonts.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+layout: true
+  
+<div class="my-footer"><span>
+
+<a>Vítor Bernardo Silveira Pereira</a> - Email: <a href="mailto:vitorpereira3115@gmail.com">vitorpereira3115@gmail.com</a>
+</span></div>
+
+---
+class: middle center bg-main1
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning=FALSE, cache = TRUE)
+
+```
+
+
+```{r}
+library(knitr)
+library(tidyverse)
+library(widgetframe)
+library(interactingan)
+#xaringan::inf_mr()
+```
+# Sumário
+# `r emo::ji("zoom")`
+---
+class: middle
+# Sumário 
+
+### Entendendo a interface do R. Pode ser modificada?
+### Como o R trabalha?
+### Atribuições e Objetos
+### Tipos de objetos e Coerções de objetos
+### Operadores Aritméticos: O R é uma grande calculadora!
+### Primeiro Script e Salvando o Script

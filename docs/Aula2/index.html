@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Modelos para Séries Temporais com Base na EGEDD</title>
+    <title>Aula 01</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Apresentador: Vítor Bernardo Silveira Pereira   Orientador: Cleber Bisognin   Coorientadora: Laís Helen Loose" />
+    <meta name="author" content="Vítor Pereira" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="css/default.css" type="text/css" />
     <link rel="stylesheet" href="css/mmp.css" type="text/css" />
@@ -13,9 +13,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Modelos para Séries Temporais com Base na EGEDD
-## Distribuição Dagum Exponencial Generalizada Exponencializada
-### Apresentador: Vítor Bernardo Silveira Pereira <br> Orientador: Cleber Bisognin <br> Coorientadora: Laís Helen Loose
+# Aula 01
+## Introdução ao Curso
+### Vítor Pereira
 
 ---
 
@@ -27,289 +27,118 @@ layout: true
 &lt;/span&gt;&lt;/div&gt;
 
 ---
-class: middle
+class: middle center bg-main1
 
 
 
 
-# Motivação
-
-- A identificação de uma **distribuição** apropropriada é muito importante para a **análise estatística**;
-- A distribuição Dagum, idealizada por Camilo Dagum, tem ganhado muita atenção na sua utilidade para modelagem de dados sobre a distribuição de renda e análise de confiabilidade.
-- Distribuições baseadas na Dagum:
-  - Distribuição exponenciada **Kumaraswamy-Dagum** (Silva et al., 2015);
-  - Distribuição **Dagum Exponencial Generalizada Exponencializada** proposta em (Nasiru et al., 2019);
-  - **Gompertz Generalizada**, proposta por El-Gohary et al. (2013), entre outros...
+# Sumário
+# 🔍
 ---
 class: middle
+# Sumário 
 
-# Motivação
+### Motivação
+### Objetivo
+### Por que R?
+### Instalando R e R Studio
+### Núcleos do Curso
+### História do R
+### Materiais? Github!
+### Referências
 
-- **Aplicações:**Principalmente na área da modelagem de dados de sobrevivência e em dados econômicos, como análise de confiabilidade, modelagem de renda pessoal e nacionais (micro e macroeconômico).    
-
-
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="css/imagens/Dagum.png" alt="&amp;lt;center&amp;gt;&amp;lt;a href='https://es.wikipedia.org/wiki/Camilo_Dagum'&amp;gt;&amp;lt;b&amp;gt;Augusto Dagum: &amp;lt;/a&amp;gt; &amp;lt;/b&amp;gt;Um dos maiores economistas e estatísticos latinos&amp;lt;/center&amp;gt;" width="40%" /&gt;
-&lt;p class="caption"&gt;&lt;center&gt;&lt;a href='https://es.wikipedia.org/wiki/Camilo_Dagum'&gt;&lt;b&gt;Augusto Dagum: &lt;/a&gt; &lt;/b&gt;Um dos maiores economistas e estatísticos latinos&lt;/center&gt;&lt;/p&gt;
-&lt;/div&gt;
 
 ---
-# Motivação
-
-- Os modelos de **Regressão Linear Normal** e **Modelos Lineares Generalizados** possuem como pressuposto que a distribuição seja Normal ou pertença a família exponencial regular;
-
-- Na prática, existem dados que não se adequam a distribuição normal ou distribuições pertecentes a familia exponencial, então nos últimos anos vêm sendo propostos **modelos alternativos**;
-
---
-- Nos novos modelos, tem-se uma reparametrização em termos da média ou quantil, para possibilitara interpretação dos parâmetros em termos de medidas de posição ou precisão; 
-
-- Na **EGEDD**, no entanto, **não há forma fechada para média e variância**, desta forma reparametrizamos a distribuição em termos dos quantis;
-
-- Com a reparametrização, uma estrutura de regressão é incluída para **modelar a média ou o quantil**, assim tendo a mesma abordagem dos MLG'S;
----
-class: middle
-
-# Motivação
-
-- Em Séries Temporais, uma das abordagens mais usuais é a metodologia Box e Jenkins, no entanto também estão surgindo modelos alternativos, denominados de **modelos dinâmicos**;
-
-- Assim a proposta do projeto, é **desenvolver um novo modelo (modelo dinâmico)  com suporte nos reais**, baseando-se na EGEDD e na distrubuição Dagum; 
+class: middle center bg-main1
+# Núcleo Nivelamento
 
 ---
 class: middle
 
-# Propriedades da EGEDD
+# Núcleo Nivelamento
 
+### Aula 01 - Introdução ao Curso, Instalação do R e RStudio, Materiais e História
+### Aula 02 - Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos, Tipos de objetos e Coerções de objetos
+### Aula 03 - Importando Dados, Definindo Caminhos, Tipos de classes: Vetor, Matrizes, Lista e DataFrames e Coerções de classes
+### Aula 04 - Escalares, Aritmética, Operadores Lógicos, Operadores Booleanos, Estruturas de controle, Laços de Repetição
+### Aula 05 - Funções e Pacotes: O coração do R! Olho no help!
 
-## Função de distribuição acumulada
-`$$F_Y(y)=1-\left\{1-\left[1-\left(1-\left(1+\alpha y^{-\delta}\right)^{-\sigma}\right)^{\gamma}\right]^{\eta}\right\}^{\lambda}, \quad y &gt; 0,$$`
+---
+class: middle center bg-main1
 
-
---
-
-## onde os paramêtros são
-
-`$$\alpha,\sigma,\lambda,\delta,\eta,\gamma &gt; 0$$`
-
-Os parâmetros `\(\sigma,\lambda,\delta,\eta,\gamma\)` são parâmetros de forma e  `\(\alpha\)` é parâmetro de escala.
+# Núcleo Básico
 
 ---
 class: middle
 
-## Função densidade de probabilidade
-`$$f_Y(y)= \frac{\alpha\sigma\lambda\delta\eta\gamma\left(1+\alpha y^{-\delta}\right)^{-\sigma-1}\left[1-\left(1+\alpha y^{-\delta}\right)^{-\sigma}\right]^{\gamma-1}}{y^{\delta+1}\left\{1-\left[1-\left(1-\left(1+\alpha y^{-\delta}\right)^{-\sigma}\right)^{\gamma}\right]^{\eta}\right\}^{1-\lambda}}$$`
+# Núcleo Básico
 
-`$$*[1-(1-(1+\alpha y^{-\delta})^{-\sigma})^{\gamma}]^{\eta-1}$$`
-
-## Função Quantílica
-`$$Q_Y(\tau)=\left\{\frac{1}{\alpha}\left[\left(1-\left(1-\left(1-(1-\tau)^\frac{1}{\lambda}\right)^\frac{1}{\eta}\right)^{\frac{1}{\gamma}}\right)^{-\frac{1}{\sigma}}-1\right]\right\}^{-\frac{1}{\delta}}, \mbox{ onde }           \quad \tau \in (0,1).$$`
-
----
-class: middle
-
-# Reparametrizações
-`$$\mu=\left\{\frac{1}{\alpha}\left[\left(1-\left(1-\left(1-\left(1-\tau\right)^\frac{1}{\lambda}\right)^\frac{1}{\eta}\right)^{\frac{1}{\gamma}}\right)^{-\frac{1}{\sigma}}-1\right]\right\}^{-\frac{1}{\delta}}$$`
-
---
-
-## Reparametrização por &amp;delta;
-`$$\delta=-\frac{1}{\log(\mu)}\log\left\{\frac{1}{\alpha}\left[\left(1-\left(1-\left(1-\left(1-\tau\right)^\frac{1}{\lambda}\right)^\frac{1}{\eta}\right)^{\frac{1}{\gamma}}\right)^{-\frac{1}{\sigma}}-1\right]\right\}$$`
-
-Em que `\(\mu_t\)` é o quantil, também utilizamos a reparametrização por `\(\alpha\)`, queremos testar juntamente com a reparametrização por `\(\delta\)`, o viés, consistência e normalidade assintótica dos estimadores, para verificar qual reparametrização seria melhor.
----
-
-class: middle
-# Submodelos da EGEDD
-
-&lt;table&gt;
-&lt;thead&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Distribuição&lt;/th&gt;
-    &lt;th&gt;&amp;alpha;&lt;/th&gt;
-    &lt;th&gt;&amp;lambda;&lt;/th&gt;
-    &lt;th&gt;&amp;sigma;&lt;/th&gt;
-    &lt;th&gt;&amp;delta;&lt;/th&gt;
-    &lt;th&gt;&amp;eta;&lt;/th&gt;
-    &lt;th&gt;&amp;gamma;&lt;/th&gt;
-  &lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;EGDD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;&amp;alpha;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;sigma;&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;&amp;eta;&lt;/td&gt;
-    &lt;td&gt;&amp;gamma;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;DD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;&amp;alpha;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;sigma;&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;EGEBD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;lambda;&lt;/td&gt;
-    &lt;td&gt;&amp;sigma;&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;&amp;eta;&lt;/td&gt;
-    &lt;td&gt;&amp;gamma;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;DB&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;sigma;&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;EGBD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;sigma;&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;&amp;eta;&lt;/td&gt;
-    &lt;td&gt;&amp;gamma;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;EGEFD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;&amp;alpha;&lt;/td&gt;
-    &lt;td&gt;&amp;lambda;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;&amp;eta;&lt;/td&gt;
-    &lt;td&gt;&amp;gamma;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;EGFD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;&amp;alpha;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;&amp;eta;&lt;/td&gt;
-    &lt;td&gt;&amp;gamma;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;FD&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;&amp;alpha;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;&amp;delta;&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-Notamos que existes parâmetros melhores para fazer as reparametrizações, sem perder a generalidade da EGEDD como o `\(\delta\)`.
+### Aula 06 - R markdown: Criar relatórios de maneira fácil e com programação junto? .rmd! 
+### Aula 07 - Github: Arquivos online e programação em grupo.
+### Aula 08 - Frequência, Medidas Resumo (Média, Mediana, Moda, Variância, Desvio-Padrão, IIQ) e Boxplot
+### Aula 09 - Mais medidas descritivas: Simetria, Assimetria e Curtose? Conhecendo a Distribuição mais famosa!
+### Aula 10 - Estimadores - Um pouquinho de inferência: O que Nível de significância? P-valor?
 
 ---
 class: middle
 
+# Núcleo Básico
 
-# Regressão Dagum
-Incluindo a estrutura de regressão pelo quantil, por:
-`$$g(\mu_t)={x}_t^{\top}{\boldsymbol{\beta}}=\sum_{j=1}^{k}{x}_{tj}{\boldsymbol{\beta}}, \quad t=1, \ldots, n,$$`
-em que `\(\quad {\boldsymbol\beta}=(\beta_1, \ldots, \beta_k)^{\top}\)` é o vetor de parâmetros desconhecidos e `\(\boldsymbol{\beta}\in\mathbb{R}^{k}\)` e `\(\boldsymbol{x}_{t} = ({x_{t1}},\cdots, {x_{tk}})^\top\)` são observações de `\(k\)` covariáveis `\(k&lt;n\)`, as quais são supostamente fixas e conhecidas. Caso o intercepto `\(\beta_0\)` seja incluído no modelo, temos que `\(x_{t1}=1\)`, para todo `\(t=1,\ldots, n\)`
+### Aula 11 - Prática - Messi x CR7? Messy x Tidy? Tidy!!! - Conhecendo o Tidyverse: READR, GGPLOT e DPLYR.
+### Aula 12 - Prática - Continuancão com GGPLOT e DPLYR - Resolvendo problemas de Dataframes: StringR? 
+### Aula 13 - Teste de Hipóteses e Intervalos de Confiança: Entendo o básico e conhecendo testes úteis
+### Aula 14 - Prática - Aplicação dos testes, Operador :: e ::: e Super atribuição. Web Scraping? Normalidade?
+
+---
+class: middle center bg-main1
+
+# Núcleo Intermediário
+
+---
+class: middle
+
+# Núcleo Intermediário
+
+### Aula 15 - ANOVA, DIC, DBC e DQL, o que é? Entendendo os testes de médias!
+### Aula 16 - Estatística Não-Paramétrica: Alternativas para os métodos anteriores!
+### Aula 17 - Prática - Estudando a ANOVA, Testes de Hipóteses e suas alternativas não paramétricas
+### Aula 18 - Entendendo a Regressão Linear Normal: Estatísticos realmente gostam de médias!
+### Aula 19 - Prática: Verificando a Regressão Linear Normal e seus pressupostos no R
+### Aula 20 - Dados Categórios e Aplicações: Aprendendo sobre o Forcats!
+
+
+---
+class: middle
+
+# Núcleo Intermediário
+
+### Aula 21 - Pacotes Mypdf1 e SigmaJr: Resolvendo problemas de formas mais simples!
+### Aula 22 - Expandindo o universo arrumado: TidyR, Tibble e Purrr - O que é?
+### Aula 23 - FlexDashboard - Criando Dashboards com R e RMarkdown! Oi, ggPlotly! 
+### Aula 24 - Xaringan - Criando Slides com códigos! Por que choras Beamer?
+### Aula 25 - REGEX - Que diabos é isso?
+---
+class: middle center bg-main1
+
+# Núcleo Avançado
+---
+class: middle center bg-main1
+
+# Não tem Núcleo Avançado
+#⚔
 --
 
-## Função de ligação
-Necessita ser contínua e duas vezes diferenciável, logo a nossa função de ligação é `\(g({\mu_t})=\log({\mu_t})\)`.
+# Brincadeira, têm! Mas ainda são só tópicos!
 
-Assim, ficaremos com o vetor de parâmetros (com a reparametrização por `\(\delta)\)`, sendo:
-`$${\boldsymbol\Theta}=(\alpha,\sigma,\lambda,\eta,\gamma,{\boldsymbol\beta^{\top}})^{\top},$$` 
-em que `\(\mu_t\)` é o quantil da observação `\(y_t\)` no tempo `\(t\)`.
 ---
+
 class: middle
 
-# Modelo DARMA(p,q)
+# Núcleo Avançado
 
-Consideramos o quantil condicional com a adição de uma componente adicional, `\(\varepsilon_t\)`, na qual é um modelo ARMA(p,q). Assim, um modelo mais geral para `\(\mu_t\)`:
+### Tópico 01: Shiny
+### Tópico 02: Machine Learning
 
-$$g(\mu_t) = {x}_t^{\top}{\boldsymbol\beta} + u_t $$
-
---
-onde `\({\boldsymbol\beta}=(\beta_1, \ldots, \beta_k)^{\top}\)` é o vetor de parâmetros desconhecidos e `\(u_t = g(y_t) - \boldsymbol{x_t}^\top\boldsymbol{\beta}\)` possui estrutura ARMA (p,q), ou seja, 
-
-`$$\phi(B)(g(y_t) -\boldsymbol{x}_t^{\top}{\boldsymbol\beta}) = \theta    (B)\epsilon_t$$`
---
-
-sendo: 
-
-`$$\phi(z)=-\sum_{i=0}^{p}\phi_iz^i,\quad \theta(z)=-\sum_{j=0}^{q}\theta_iz^i$$`
-onde `\(B\)` é operador `\(\textit{backward}\)`, `\(\phi_0 = -1 = \theta_0\)` e assumimos que `\(\phi(\cdot)\)` e `\(\theta(\cdot)\)` não possuem raízes em comum e `\(\epsilon_t\)` é um erro aleatório. 
-
----
-class: middle
-
-# Modelo final DAGUM ARMA:
-
-`$$g(\mu_t) = {x}_t^{\top}{\beta} + \sum _{j=1}^n\phi_j(g(\mu_t) -{x}_t^{\top}{\boldsymbol\beta}) + \phi(B)\epsilon_t$$`
-
----
-class: middle
-# Estimador de Máxima Verossimilhança
-A estimação do vetor de parâmetros `\(\boldsymbol{\Theta}\)` através do método da máxima verossimilhança, denotado por EMV, é dado por
- 
-`$$\widehat{\boldsymbol{\Theta}}=argmax_{{\boldsymbol{\Theta}}\in \Theta}\{\ell(\boldsymbol{\Theta})\}$$`
---
-
-em que `\(\boldsymbol{\Omega}\subseteq \{\mathbb{R}_+^5\times \mathbb{R}^{k+1+p+q}\}\)` é o espaço de parâmetros e `\(\ell(\boldsymbol{\Theta})\)` é a função de log-verossimilhança de `\(\boldsymbol{y}\)` é dada por
-`$$\ell(\boldsymbol{\Theta})=\ell(\boldsymbol{\Theta};\boldsymbol{y})=\sum_{t=1}^{n}\ell_t(\boldsymbol{\Theta},{{y_t}}),$$`
-
---
-
-em que
-`$$\ell_t(\boldsymbol{\Theta},y_t) = \log(\alpha\delta\sigma\gamma\eta\lambda)-(\delta+1)\log(y_t)-(\sigma+1)\log(z_t)$$`
-`$$+(\gamma-1)\log\left(1-z_t^{-\sigma}\right)+(\eta-1)\log\left[1-\left(1-z_t^{-\sigma}\right)^\gamma\right]$$`
-`$$+(\lambda-1)\log\left\{1-\left[1-\left(1-z_t^{-\sigma}\right)^\gamma\right]^\eta\right\},$$`
----
-class: middle
-# Estimador de Máxima Verossimilhança
-
-Considerando a reparametrização por `\(\delta\)`, o vetor de parâmetros do modelo é dado por: 
-`$$\boldsymbol{\Theta}=(\alpha,\sigma,\gamma,\eta,\lambda,\boldsymbol{\beta}^\top,\boldsymbol{\phi}^\top, \boldsymbol{\theta}^\top)^\top$$`
-
----
-class: middle
-
-# Outros Procedimentos Estatísticos:
-- Construção de testes de hipótese para verificar distribuição dos dados, verificando se é para a EGEDD ou um submodelo;
-- Utilização de métodos númericos para execução de simulações (Newton-Rapson, Gosolnp com os métodos CG, BFGS e L-BFGS-B);
-- Utilização de Simulações de Monte Carlo para estimação de parâmetros e análise de diagnósticos dos modelos;
-- Desenvolvimento de Intervalos de Confiança e testes de hipóteses baseados na distribuição assintótica dos EMV's;
-- Utilização dos estimadores de Entropia Extensiva;
-- Aplicação a dados reais.
-
-
-
----
-class: full-slide-fig
-&lt;iframe src="https://vitorpereira.shinyapps.io/EGEDD_FDP/?showcase=0" width="100%" height="700px" data-external="1"&gt;&lt;/iframe&gt;
-
-
----
-class: middle
-
-# Referências Bibliográficas
-
-- Dagum, C. (1977). El modelo log-logístico y la distribución del ingreso en la
-argentina. El Trimestre Económico, 44(176 (4):837–864
-
-- Nasiru, S., Mwita, P. N., e Ngesa, O. (2019). Exponentiated generalized
-exponential dagum distribution. Journal of King Saud University-Science,
-31(3):362–371.
-
-- R Core Team (2021). R: A Language and Environment for Statistical Computing.
-R Foundation for Statistical Computing, Vienna, Austria
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
