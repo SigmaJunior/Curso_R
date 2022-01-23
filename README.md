@@ -2,62 +2,69 @@
 
 ## Núcleo Nivelamento
 
-### Aula 1: Introdução ao Curso, Instalação do R e do R Studio e História
+### Aula 01 - Introdução ao Curso, Instalação do R e RStudio, Materiais e História
 
-### Aula 2: Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos e Coerções de Tipos
+### Aula 02 - Introdução ao R, Interface, como o R Trabalha, Atribuições, Objetos, Tipos de objetos e Coerções de objetos
 
-### Aula 3: Importando Dados, Definindo Caminhos, Tipos de objetos: Vetor, Matrizes, Lista e DataFrames
+### Aula 03 - Importando Dados, Definindo Caminhos, Tipos de classes: Vetor, Matrizes, Lista e DataFrames e Coerções de classes
 
-### Aula 4: Escalares, Aritmética, Operadores Lógicos, Operadores Booleanos, Estruturas de controle, Laços de Repetição
+### Aula 04 - Escalares, Aritmética, Operadores Lógicos, Operadores Booleanos, Estruturas de controle, Laços de Repetição
 
-### Aula 5: Funções e Pacotes
+### Aula 05 - Funções e Pacotes: O coração do R! Olho no help!
+
 
 ## Núcleo Básico
 
-### Aula 6: R markdown
+### Aula 06 - R markdown: Criar relatórios de maneira fácil e com programação junto? .rmd! 
 
-### Aula 7: Github
+### Aula 07 - Github: Arquivos online e programação em grupo.
 
-### Aula 8: Frequência, Medidas Resumo (Média, Mediana, Moda, Variância, Desvio-Padrão, IIQ) e Boxplot
+### Aula 08 - Frequência, Medidas Resumo (Média, Mediana, Moda, Variância, Desvio-Padrão, IIQ) e Boxplot
 
-### Aula 9: Gráficos de Simetria, Distribuição Normal, Assimetria e Curtose
+### Aula 09 - Mais medidas descritivas: Simetria, Assimetria e Curtose? Conhecendo a Distribuição mais famosa!
 
-### Aula 10: Estimadores
+### Aula 10 - Estimadores - Um pouquinho de inferência: O que Nível de significância? P-valor?
 
-### Aula 11: Aula prática - Começando com Tidyverse: READR, GGPLOT e DPLYR - Aplicando a DataFrame na web - Normal?
+### Aula 11 - Prática - Messi x CR7? Messy x Tidy? Tidy!!! - Conhecendo o Tidyverse: READR, GGPLOT e DPLYR.
 
-### Aula 12: Aula prática - Continuancão com GGPLOT e DPLYR - Importando Dataframe: Como resolveremos seus problemas? STRINGR?
+### Aula 12 - Prática - Continuancão com GGPLOT e DPLYR - Resolvendo problemas de Dataframes: StringR? 
 
-### Aula 13: Teste de Hipóteses e Intervalos de Confiança: Entendo o básico e conhecendo testes úteis
+### Aula 13 - Teste de Hipóteses e Intervalos de Confiança: Entendo o básico e conhecendo testes úteis
 
-### Aula 14: Aula prática - Aplicação dos testes, Operador :: e ::: e Super atribuição
+### Aula 14 - Prática - Aplicação dos testes, Operador :: e ::: e Super atribuição. Web Scraping? Normalidade?
+
 
 ## Núcleo Intermediário
 
-### Aula 15: ANOVA: DIC, DBC e DQL - Testes: Tukey, Duncan
+### Aula 15 - ANOVA, DIC, DBC e DQL, o que é? Entendendo os testes de médias!
 
-### Aula 16: Estatística Não-Paramétrica: Alternativas para os métodos anteriores
+### Aula 16 - Estatística Não-Paramétrica: Alternativas para os métodos anteriores!
 
-### Aula 17: Aula prática - Estudando a ANOVA, Testes de Hipóteses e suas alternativas não paramétricas
+### Aula 17 - Prática - Estudando a ANOVA, Testes de Hipóteses e suas alternativas não paramétricas
 
-### Aula 18: Entendo a Regressão Linear Normal
+### Aula 18 - Entendendo a Regressão Linear Normal: Estatísticos realmente gostam de médias!
 
-### Aula 19: Aula prática: Verificando a Regressão Linear Normal e seus pressupostoos no R
+### Aula 19 - Prática: Verificando a Regressão Linear Normal e seus pressupostos no R
 
-### Aula 20: Dados Categórios e Aplicações - Forcatas
+### Aula 20 - Dados Categórios e Aplicações: Aprendendo sobre o Forcats!
 
-### Aula 21: Pacotes MYPDF1 e SigmaJR
+### Aula 21 - Pacotes Mypdf1 e SigmaJr: Resolvendo problemas de formas mais simples!
 
-### Aula 22: TidyR, Tibble e Purrr - O que é?
+### Aula 22 - Expandindo o universo arrumado: TidyR, Tibble e Purrr - O que é?
 
-### Aula 23: FlexDashboard
+### Aula 23 - FlexDashboard - Criando Dashboards com R e RMarkdown! Oi, ggPlotly! 
 
-### Aula 24: Xaringna
+### Aula 24 - Xaringan - Criando Slides com códigos! Por que choras Beamer?
 
-### Aula 25: FlexDashboard e Leaflet
+### Aula 25 - REGEX - Que diabos é isso?
 
-### NSE (?)
 
 ## Núcleo Avançado
 
-### Machine Learning (TidyModels)
+### Tópico 01: Shiny
+### Tópico 02: Machine Learning
+### Tópico 03: ModelTime (?)
+
+
+
+
