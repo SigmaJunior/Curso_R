@@ -1,0 +1,4 @@
+Nome Gastos Renda Curso Time 
+Vítor 500 0 TRUE 1
+Alisson 3000 2000 FALSE 2
+Caroline 5000 13000 FALSE 2

@@ -1,0 +1,36 @@
+---
+title: "Aula 01"
+subtitle: "Introdução ao Curso"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/quarto.png
+    css: styles.css
+    footer: "Vítor Bernardo Silveira Pereira"
+resources:
+  - demo.pdf
+---
+## {auto-animate=true}
+
+::: {.column width="60%";style="margin-top: 100px; font-size: 3em;"}
+Sumário `r emo::ji("zoom")`
+:::
+
+
+## {auto-animate=true}
+
+::: {style="margin-top: 50px; font-size: 2em"}
+Sumário `r emo::ji("zoom")`
+:::
+
+### Motivação
+### Objetivo
+### Por que R?
+### Instalando R e R Studio
+### Núcleos do Curso
+### História do R
+### Onde estão os materiais?
+### Referências

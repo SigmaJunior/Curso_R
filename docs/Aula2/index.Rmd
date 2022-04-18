@@ -44,7 +44,71 @@ class: middle
 
 ### Entendendo a interface do R. Pode ser modificada?
 ### Como o R trabalha?
+### Primeiro Script
 ### Atribuições e Objetos
+### Importando Dados
 ### Tipos de objetos e Coerções de objetos
 ### Operadores Aritméticos: O R é uma grande calculadora!
 ### Primeiro Script e Salvando o Script
+
+---
+class: middle
+# Interface do R 
+```{r, out.width="80%"}
+knitr::include_graphics("ide_rstudio.png")
+```
+---
+class: middle
+# Como o R Trabalha?
+
+- Linguagem interpretada que utiliza principalmente C, mas também S, Fortran e C++;
+
+- Armazenamento de arquivos de instalação descentralizado, o CRAN, vários computadores espalhados pelo mundo (inclusive no Brasil), com os arquivos, normalmente chamados de **Espelhos**;
+
+- Três princípios:
+
+  - Princípio do Objeto: Tudo que existe em R é um objeto;
+  - Princípio da Função: Tudo que acontece no R é uma chamada de função;
+---
+class: middle
+
+# Primeiro Script
+
+- File > New File > R Script (Ctrl + Shift + N);
+- Definindo caminho: Files > ... > Pasta > Set As Working Directory (setwd("Caminho da pasta"));
+- Verificando o diretório atual: Files > More > Go To Working Directory (getwd());
+
+---
+class: middle
+# Atribuições e Objetos
+
+- "O objeto não tem um nome, mas o nome tem um objeto";
+- Associar um objeto a um nome: "<-", "=", "->";
+- Boa prática: Usar "=" apenas para argumentos de função;
+- Todos objetos em R tem uma classe: 
+- Classes: Numeric, logical, character, factor, list, matrix, array e data.frame.
+- Suprimir o efeito da classe: unclass()
+
+
+# Importando Dados
+
+- A entrada de dados no R pode ser realizada de diferentes formas. O formato mais adequado vai depender do tamanho do conjunto de dados, e se os dados já existem em outro formato para serem importados ou se serão digitados diretamente no R.
+
+- Entrada de dados diretamente no R: `c()`, `rep()`, `seq()` ou :, `matrix()`, `list()` e `data.frame()`
+
+- Entrada de via teclado: `scan()` e `readLines()`
+
+- Entrada de arquivos via texto: `read.table()`, `read.csv()`, `read.csv2()` e `read_delim()`
+
+- Comandos importantes: `head()`, `tail()`, `str()` e `summary()`
+
+# Tipos de objetos e coerções de dados
+
+- Todo objeto tem dois atributos intrínsecos: modo e comprimento;
+- Modo é a natureza do objeto (numeric, logic, character, complex ou raw);
+- Comprimento mede a quantidade de elementos no objeto;
+
+# Operadores matemáticos 
+```{r, out.width="80%"}
+knitr::include_graphics("operador.png")
+```
