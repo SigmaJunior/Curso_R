@@ -107,6 +107,7 @@ class: middle
 - Todo objeto tem dois atributos intrínsecos: modo e comprimento;
 - Modo é a natureza do objeto (numeric, logic, character, complex ou raw);
 - Comprimento mede a quantidade de elementos no objeto;
+- Não utilizaremos objetos complex ou raw, no momento.
 
 # Operadores matemáticos 
 ```{r, out.width="80%"}
