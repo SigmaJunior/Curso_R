@@ -90,6 +90,7 @@ class: middle
 
 ---
 class: middle
+<<<<<<< HEAD
 # Tipos de objetos e coerções de dados
 
 - Todo objeto tem dois atributos intrínsecos: modo e comprimento;
@@ -110,6 +111,8 @@ class: middle
 
 ---
 class: middle
+=======
+>>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
 # Importando Dados
 
 - A entrada de dados no R pode ser realizada de diferentes formas. O formato mais adequado vai depender do tamanho do conjunto de dados, e se os dados já existem em outro formato para serem importados ou se serão digitados diretamente no R.
@@ -125,6 +128,8 @@ class: middle
 ---
 class: middle
 # Funcionamento básico das estruturas de dados
+<<<<<<< HEAD
+=======
 
 As estruturas de dados no R e na programação em geral, são baseados nas matrizes matemáticas:
 
@@ -143,7 +148,32 @@ knitr::include_graphics("matrizes_matemática.png")
 ```
 
 
+---
+class: middle
+# Tipos de objetos e coerções de dados
+>>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
 
+As estruturas de dados no R e na programação em geral, são baseados nas matrizes matemáticas:
+
+<<<<<<< HEAD
+```{r, out.width="80%"}
+knitr::include_graphics("matrizes_matemática.png")
+```
+
+---
+class: middle
+# Funcionamento básico das estruturas de dados
+
+No R a estrutura de dados (bancos de dados) fica assim:
+
+```{r, out.width="80%"}
+knitr::include_graphics("matrizes_matemática.png")
+```
+
+
+
+=======
+>>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
 ---
 class: middle
 # Operadores matemáticos 
