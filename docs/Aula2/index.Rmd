@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning
 library(knitr)
 library(tidyverse)
 library(widgetframe)
-library(interactingan)
+#library(interactingan)
 #xaringan::inf_mr()
 ```
 # Sumário
@@ -84,12 +84,32 @@ class: middle
 
 - "O objeto não tem um nome, mas o nome tem um objeto";
 - Associar um objeto a um nome: "<-", "=", "->";
-- Boa prática: Usar "=" apenas para argumentos de função;
 - Todos objetos em R tem uma classe: 
 - Classes: Numeric, logical, character, factor, list, matrix, array e data.frame.
 - Suprimir o efeito da classe: unclass()
 
+---
+class: middle
+# Tipos de objetos e coerções de dados
 
+- Todo objeto tem dois atributos intrínsecos: modo e comprimento;
+- Modo é a natureza do objeto (numeric, logic, character, complex ou raw);
+- Comprimento mede a quantidade de elementos no objeto;
+- Não utilizaremos objetos complex ou raw, no momento.
+---
+class: middle
+# Tipos básicos de dados
+
+- Caracter, inteiro, númerico e lógico
+
+---
+class: middle
+# O que é um fator?
+
+
+
+---
+class: middle
 # Importando Dados
 
 - A entrada de dados no R pode ser realizada de diferentes formas. O formato mais adequado vai depender do tamanho do conjunto de dados, e se os dados já existem em outro formato para serem importados ou se serão digitados diretamente no R.
@@ -98,17 +118,34 @@ class: middle
 
 - Entrada de via teclado: `scan()` e `readLines()`
 
-- Entrada de arquivos via texto: `read.table()`, `read.csv()`, `read.csv2()` e `read_delim()`
+- Entrada de arquivos via texto: `read.table()`, `read.csv()`, `read.csv2()` e `read.delim()`
 
 - Comandos importantes: `head()`, `tail()`, `str()` e `summary()`
 
-# Tipos de objetos e coerções de dados
+---
+class: middle
+# Funcionamento básico das estruturas de dados
 
-- Todo objeto tem dois atributos intrínsecos: modo e comprimento;
-- Modo é a natureza do objeto (numeric, logic, character, complex ou raw);
-- Comprimento mede a quantidade de elementos no objeto;
-- Não utilizaremos objetos complex ou raw, no momento.
+As estruturas de dados no R e na programação em geral, são baseados nas matrizes matemáticas:
 
+```{r, out.width="80%"}
+knitr::include_graphics("matrizes_matemática.png")
+```
+
+---
+class: middle
+# Funcionamento básico das estruturas de dados
+
+No R a estrutura de dados (bancos de dados) fica assim:
+
+```{r, out.width="80%"}
+knitr::include_graphics("matrizes_matemática.png")
+```
+
+
+
+---
+class: middle
 # Operadores matemáticos 
 ```{r, out.width="80%"}
 knitr::include_graphics("operador.png")

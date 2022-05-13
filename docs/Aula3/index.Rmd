@@ -42,11 +42,10 @@ library(interactingan)
 class: middle
 # Sumário 
 
-### Importando dados: scan(), read.table(), 
+### Importando dados 
 ### Vetores e seus tipos: Numeric, Logical e Character
 ### Manipulações e operações com vetores
 ### Class, typeof, seq e rep
-### Fator
 ### Matriz
 ### Array
 ### Lista
@@ -54,3 +53,22 @@ class: middle
 ### Conversão de estruturas de dados em outras
 ### Names, row.names, colnames() e rownames()
 ### Indexação
+
+---
+# Formas de importar dados
+
+- A leitura (entrada) de dados em R pode ser realizada com diferentes tipos de arquivos. O formato mais adequado vai depender do programa que gerou o arquivo e a sua forma de armazenamento (separação), as principais formas são:
+
+
+  -`read.table()`: É a "função mãe" para a leitura de arquivos, a maioria das outras funções para a leitura de arquivos se baseiam nela, usado também para a leitura de arquivos .txt separados por espaço;
+  -`read.csv()`: Leitura de arquivos .csv separados por vírgula;
+  -`read.csv2()`: Leitura de arquivos .csv separados por ponto e vírgula;
+  -`read.delim()`: Leitura de arquivos .txt separados `TAB` ou outros formatos indicados pelo `sep`; 
+  - `readxl::read_excel()`: Leitura de arquivos de excel (.xlsx).
+
+- Existem outras inúmeras formas de importação para arquivos de outros formatos: `read.spss()` (SPSS), `read.dta()` (stata), `hmisc::sas.get()`(sas), `foreign::read.xport()` (sas) e `geojsonio::geojson_read()` (geojson).
+
+---
+# Vetores
+
+Os vetores em R são semelhantes aos vetores da matemática, ou seja, é uma estrutura que comporta o armazenamento de dados em várias dimensões, não apenas um único valor.
