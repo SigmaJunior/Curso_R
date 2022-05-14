@@ -1,33 +1,90 @@
 # Verificando o diretório/pasta dos arquivos
 getwd()
 
-# Atribuindo valores a variáveis
+#Verificando a classe
 
-x <- 1
-y = x
-x = 2L
-x -> w
-
-autor <- "Vitor"
-curso <- TRUE
-x + y + curso
-z = 2.5
-
-
-# Verificando a sua classe/tipo
-
+# Caracteres
+autor <- "Vítor"
+autor
 class(autor)
+typeof(autor)
+length(autor)
+
+# Lógicos/Booleanos
+curso <- TRUE
+curso
 class(curso)
-class(x)
-class(z)
-class(y)
-typeof(z)
-typeof(x)
-typeof(y)
+typeof(curso)
+length(curso)
+
+# Numéricos
+num <- 1
+num1 = num
+
+num == num1
+identical(num,num1)
+
+num = 2
+num -> num2
+
+## OBS: == é um comparador, para ver se dois objetos são iguais.
+num == num1
+identical(num,num1)
+
+num == num2
+identical(num,num2)
+
+assign("n", 2L)
+
+num == num2
+identical(num,n)
+
+teste <- num + num1 + curso
+
+FALSE == F; F == 0
+TRUE == T; T == 1
+
+num3 = 2.5
+
+class(num)
+class(n)
+class(num3)
+
+n
+
+# Conversão de objetos
+
+class(as.integer(n))
+class(as.double(n))
+class(as.numeric(n))
+
+
+# Ou seja, para a função class temos que double = numeric, mas diferente de integer
+# É Assim que o ambiente global do R interpreta o objeto
+
+typeof(num)
+typeof(n)
+typeof(num3)
+
+typeof(as.integer(n))
+typeof(as.double(n))
+typeof(as.numeric(n))
+
+# Para a função typeof, que é como os objetos são armazenados não existe mais o tipo de objeto, numeric e sim o double.
+
 
 # Conversão de tipos 
 as.double(x)
 as.integer(curso)
+
+#Fator
+
+fator <- factor("a")
+fator1 <- factor(1)
+class(fator);class(fator1)
+typeof(fator); typeof(fator)
+unclass(fator)
+nlevels(fator)
 
 #Importando dados
 dados <- read.table('docs/Aula2/dados.txt')
@@ -90,7 +147,7 @@ dados[,6] <- round(dados[,2]/dados[,3]*100,2)
 
 colnames(dados)
 
-colnames(dados) <- c("Nome","Gastos","Renda","Curso","Time","Renda à Comprometida")
+colnames(dados) <- c("Nome","Gastos","Renda","Curso","Time","Renda Comprometida")
 
 
 

@@ -82,37 +82,54 @@ class: middle
 class: middle
 # Atribuições e Objetos
 
-- "O objeto não tem um nome, mas o nome tem um objeto";
-- Associar um objeto a um nome: "<-", "=", "->";
-- Todos objetos em R tem uma classe: 
-- Classes: Numeric, logical, character, factor, list, matrix, array e data.frame.
-- Suprimir o efeito da classe: unclass()
+- **"O objeto não tem um nome, mas o nome tem um objeto"** (Wickham, 2019);
+- O que é um objeto? É um **símbolo** ou **variável** capaz de armanezar dados ou uma estrutura de dados;
+- O R é `case sensitive` e os nomes de objetos podem ser formados por letras, números, “_”, e “.”;
+- Desde que não comecem por números ou pontos;
+- Associar um objeto a um nome: "<-", "=", "->" e "assign".
 
 ---
 class: middle
-<<<<<<< HEAD
-# Tipos de objetos e coerções de dados
-
+# Atribuições e Objetos
+- Todos objetos em R tem uma classe: (Numeric, Logical, Character, Factor, List, Matrix, Array e Data Frame);
+- Suprimir o efeito da classe: `unclass()`;
+- Começaremos trabalhando **Vetores atômicos** de comprimento 1, variáveis que armazenam apenas um tipo/classe de objeto  (também podemos chamar de escalar);
 - Todo objeto tem dois atributos intrínsecos: modo e comprimento;
-- Modo é a natureza do objeto (numeric, logic, character, complex ou raw);
+- Modo é a natureza do objeto.
 - Comprimento mede a quantidade de elementos no objeto;
-- Não utilizaremos objetos complex ou raw, no momento.
+
 ---
 class: middle
 # Tipos básicos de dados
 
-- Caracter, inteiro, númerico e lógico
+- Vetores atômicos 5 classes básicos: Numérico, Lógico, Caracter, Complexo (complex) ou Bruto (raw);
+- Mas temos 6 modos, a classe numérica pode ser double ou integer;
+- Não utilizaremos objetos complex ou raw, no momento.
+- Qual a diferença entre `class` e `typeof`
+  - `class`: Informa qual a classe do objeto no R;
+  - `typeof`: Informa como o objeto está sendo armazendo (como é interpretado na linguagem `C`);
+  - `mode`: Informa a classe do objeto se baseando na linguagem `S`. 
 
 ---
 class: middle
-# O que é um fator?
+# Classe (Tipos?) de Objetos
+Comparação dos tipos de objetos pelas três funções `class()`, `mode()` e `typeoff()`:
+```{r, out.width="80%"}
+knitr::include_graphics("Comparação.png")
+```
 
+---
+class: middle
+# Coerção de tipos
+
+- Em vetores atômicos com comprimento maior que 1 e tipos diferentes de objetos são misturados, temos a **coerção implícita**;
+- No entanto, nós podemos forçar um objeto a mudar a sua classe com a **coerção explícita**;
+- `as.integer`, `as.double`, `as.numeric`, `as.logical`, `as.logical`, `as.factor`, ...
+- Também podemos verificar o tipo do objeto com `is.integer`, `is.logical`, ...
 
 
 ---
 class: middle
-=======
->>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
 # Importando Dados
 
 - A entrada de dados no R pode ser realizada de diferentes formas. O formato mais adequado vai depender do tamanho do conjunto de dados, e se os dados já existem em outro formato para serem importados ou se serão digitados diretamente no R.
@@ -128,8 +145,6 @@ class: middle
 ---
 class: middle
 # Funcionamento básico das estruturas de dados
-<<<<<<< HEAD
-=======
 
 As estruturas de dados no R e na programação em geral, são baseados nas matrizes matemáticas:
 
@@ -144,39 +159,28 @@ class: middle
 No R a estrutura de dados (bancos de dados) fica assim:
 
 ```{r, out.width="80%"}
-knitr::include_graphics("matrizes_matemática.png")
-```
-
-
----
-class: middle
-# Tipos de objetos e coerções de dados
->>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
-
-As estruturas de dados no R e na programação em geral, são baseados nas matrizes matemáticas:
-
-<<<<<<< HEAD
-```{r, out.width="80%"}
-knitr::include_graphics("matrizes_matemática.png")
+knitr::include_graphics("matriz.png")
 ```
 
 ---
 class: middle
-# Funcionamento básico das estruturas de dados
+# O que é um fator?
 
-No R a estrutura de dados (bancos de dados) fica assim:
+- Uma classe construída a partir dos tipos básicos citados anteriormente, tendo características de caracter e inteiro;
+- São parecidos com caracteres, mas tratados com inteiro;
+- Características:
+  - Coleção de categorias ou **níveis**;
+  - Estrutura unidimensional;
+- São tratados como inteiro, pois cada nível única é identificada internamente por um número;
+- Faz com que os fatores possuam uma ordenação, de acordo com as categorias únicas;
+- Caso haja uma hierarquia, os níveis dos fatores podem ser ordenados explicitamente através do argumento `levels` (Util?);
+- **OBS**: Se o fator for utilizado com níveis numéricos, precisamos ter cuidado quando for empregar técnicas estatísticas, pois não há relação numérica entre os níveis, um nível identificado com o número 2, não tem o dobro de valor que o nível identificado com o número 1.
 
-```{r, out.width="80%"}
-knitr::include_graphics("matrizes_matemática.png")
-```
-
-
-
-=======
->>>>>>> 0b1b99c8053e913936decb8430d9ed68b8e7af11
 ---
 class: middle
 # Operadores matemáticos 
+Os principais operadores matemáticos do R são:
 ```{r, out.width="80%"}
 knitr::include_graphics("operador.png")
 ```
+    - OBS: Potência também pode ser feita com `**` (`2**2= 2^2`). 
