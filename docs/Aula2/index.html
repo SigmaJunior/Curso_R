@@ -91,7 +91,7 @@ class: middle
 ---
 class: middle
 # Atribuições e Objetos
-- Todos objetos em R tem uma classe: (Numeric, Logical, Character, Factor, List, Matrix, Array e Data Frame);
+- Todos objetos em R tem uma classe: (Numeric, Logical, Character, Factor, List, Matrix, Array, Data Frame, ...);
 - Suprimir o efeito da classe: `unclass()`;
 - Começaremos trabalhando **Vetores atômicos** de comprimento 1, variáveis que armazenam apenas um tipo/classe de objeto  (também podemos chamar de escalar);
 - Todo objeto tem dois atributos intrínsecos: modo e comprimento;
@@ -100,25 +100,26 @@ class: middle
 
 ---
 class: middle
-# Tipos básicos de dados
+# Classes básicos de dados
 
-- Vetores atômicos 5 classes básicos: Numérico, Lógico, Caracter, Complexo (complex) ou Bruto (raw);
+- Dados tem 5 classes básicas: Numérico, Lógico, Caracter, Complexo (complex) ou Bruto (raw);
 - Mas temos 6 modos, a classe numérica pode ser double ou integer;
 - Não utilizaremos objetos complex ou raw, no momento.
 - Qual a diferença entre `class` e `typeof`
   - `class`: Informa qual a classe do objeto no R;
   - `typeof`: Informa como o objeto está sendo armazendo (como é interpretado na linguagem `C`);
   - `mode`: Informa a classe do objeto se baseando na linguagem `S`. 
+- **OBS: **  Essas são as seis classes básicas, mas existem um número muito grande de classes, praticamente é inventanda uma classe nova todo dia com seu objetivo específico.
 
 ---
 class: middle
-# Classe (Tipos?) de Objetos
+# Tipos dos objetos
 Comparação dos tipos de objetos pelas três funções `class()`, `mode()` e `typeoff()`:
 &lt;img src="Comparação.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: middle
-# Coerção de tipos
+# Coerção de tipos (classes)
 
 - Em vetores atômicos com comprimento maior que 1 e tipos diferentes de objetos são misturados, temos a **coerção implícita**;
 - No entanto, nós podemos forçar um objeto a mudar a sua classe com a **coerção explícita**;
@@ -132,7 +133,7 @@ class: middle
 
 - A entrada de dados no R pode ser realizada de diferentes formas. O formato mais adequado vai depender do tamanho do conjunto de dados, e se os dados já existem em outro formato para serem importados ou se serão digitados diretamente no R.
 
-- Entrada de dados diretamente no R: `c()`, `rep()`, `seq()` ou :, `matrix()`, `list()` e `data.frame()`
+- Entrada de dados diretamente no R: `c()`, `rep()`, `seq()` ou `:`, `matrix()`, `list()` e `data.frame()`
 
 - Entrada de via teclado: `scan()` e `readLines()`
 

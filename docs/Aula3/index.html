@@ -64,28 +64,48 @@ class: middle
 ### Indexação
 
 ---
+class: middle
+
 # Formas de importar dados
 
 - A leitura (entrada) de dados em R pode ser realizada com diferentes tipos de arquivos. O formato mais adequado vai depender do programa que gerou o arquivo e a sua forma de armazenamento (separação), as principais formas são:
 
 
-  -`read.table()`: É a "função mãe" para a leitura de arquivos, a maioria das outras funções para a leitura de arquivos se baseiam nela, usado também para a leitura de arquivos .txt separados por espaço;
-  -`read.csv()`: Leitura de arquivos .csv separados por vírgula;
-  -`read.csv2()`: Leitura de arquivos .csv separados por ponto e vírgula;
-  -`read.delim()`: Leitura de arquivos .txt separados `TAB` ou outros formatos indicados pelo `sep`; 
+  - `read.table()`: É a "função mãe" para a leitura de arquivos, a maioria das outras funções para a leitura de arquivos se baseiam nela, usado também para a leitura de arquivos .txt separados por espaço;
+  - `read.csv()`: Leitura de arquivos .csv separados por vírgula;
+  - `read.csv2()`: Leitura de arquivos .csv separados por ponto e vírgula;
+  - `read.delim()`: Leitura de arquivos .txt separados `TAB` ou outros formatos indicados pelo `sep`; 
   - `readxl::read_excel()`: Leitura de arquivos de excel (.xlsx).
 
 - Existem outras inúmeras formas de importação para arquivos de outros formatos: `read.spss()` (SPSS), `read.dta()` (stata), `hmisc::sas.get()`(sas), `foreign::read.xport()` (sas) e `geojsonio::geojson_read()` (geojson).
 
 ---
+class: middle
+
 # Vetores
 
-Os vetores em R são semelhantes aos vetores da matemática, ou seja, é uma estrutura que comporta o armazenamento de dados em várias dimensões, não apenas um único valor.
+Os vetores em R são semelhantes aos vetores da matemática, ou seja, é uma estrutura que comporta o armazenamento de um agrupamento dados, não apenas um único valor (escalar).
 
-**Definição ** : Estrutura unidimensional que só pode conter elementos da mesma classe
+**Definição ** : Estrutura unidimensional que só pode conter elementos da mesma classe (atômico/homogêneo).
 
-- É o primeiro vetor atômico não-escalar que trabalharemos;
--
+- É o primeiro objeto atômico não-escalar que trabalharemos;
+- Para criarmos vetores atômicos não-escalaremos usamos a função `c()`, útil para **c**ombinar valores em um vetor ou lista (o `c()` vem literalmente da palavra *combine*);
+- Vetores atômicos tem 5 classes básicas: Numérico, Lógico, Caracter, Complexo (complex) ou Bruto (raw);
+- Caso tenha mais de uma classe em um vetor o R realiza **coerção implícita** priorizando: Caracter &gt; Numérico &gt; Lógico.
+
+---
+class: middle
+
+# Observações sobre vetores
+
+- Entrada de dados diretamente no R: `c()`, `rep()`, `seq()` ou `:`;
+- A função `seq()` e o operador `:` tem um recurso chamado de **abreviação alternativa**, faz com que a sequência de números não seja armazenada completamente, apenas os extremos, assim a ocupação de memória será sempre a mesma;
+- *Double*: possui acurácia de 16 dígitos significativos, então pode ser introduzido um erro de precisão/arrendondamento, pois não temos a precisão exata do número, pois em muitos casos sua representação seria infinita (números irracionais),  assim um vetor de modo *double* precisa de mais memória do um de modo *integer*;
+- Valores perdidos ou quando algum elemento de um vetor representamos pela constante &lt;u&gt;lógica&lt;/u&gt; `NA` *not available*:
+  - Temos NA's específicos para os modos: NA\_integer\_, NA\_real\_ (o equivalente para o modo double) e NA\_character\_, no entanto na maioria das vezes, o objeto já converte o NA para o modo do objeto;
+  - Podemos perceber que NA não é igual a outro NA, assim não podemos testar se um objeto é igual a NA, para isso utilizamos `is.na()`, também temos outros valores especiais `NaN` (*not a number*), `-Inf` e `Inf` (pontos flutuantes, assim como para os double);
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
